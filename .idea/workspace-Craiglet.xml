@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aa3b57c9-27b5-4416-ba44-9e0373190a28" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="JupyterTrust" id="9612e0d0-0bed-4ee3-a2e4-1a97202e116d" />
+  <component name="ProjectId" id="1fEZ1lKUS9Xh17lz6LEbVJXMCzF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bhei" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager" selected="Python tests.pytest for test_ops.TestOpNode.test_find_columns">
+    <configuration name="pytest for test_ops.TestComparisonOp.test_find_where_field" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="ormy" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_ops.TestComparisonOp.test_find_where_field&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_ops.TestListResultOpNode.test_gt" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="ormy" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_ops.TestListResultOpNode.test_gt&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_ops.TestListResultOpNode.test_gte" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="ormy" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_ops.TestListResultOpNode.test_gte&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_ops.TestListResultOpNode.test_lte" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="ormy" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_ops.TestListResultOpNode.test_lte&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_ops.TestOpNode.test_find_columns" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="ormy" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_ops.TestOpNode.test_find_columns&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.pytest for test_ops.TestOpNode.test_find_columns" />
+        <item itemvalue="Python tests.pytest for test_ops.TestComparisonOp.test_find_where_field" />
+        <item itemvalue="Python tests.pytest for test_ops.TestListResultOpNode.test_gte" />
+        <item itemvalue="Python tests.pytest for test_ops.TestListResultOpNode.test_gt" />
+        <item itemvalue="Python tests.pytest for test_ops.TestListResultOpNode.test_lte" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aa3b57c9-27b5-4416-ba44-9e0373190a28" name="Default Changelist" comment="" />
+      <created>1595784999652</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1595784999652</updated>
+      <workItem from="1595785018226" duration="1241000" />
+      <workItem from="1596046866749" duration="39000" />
+      <workItem from="1596642273880" duration="10049000" />
+      <workItem from="1597493856545" duration="10739000" />
+      <workItem from="1597667826417" duration="10966000" />
+      <workItem from="1597756314366" duration="1302000" />
+      <workItem from="1597870076490" duration="7531000" />
+      <workItem from="1598048477086" duration="10596000" />
+      <workItem from="1598272305938" duration="1525000" />
+      <workItem from="1598290201708" duration="411000" />
+      <workItem from="1598396043592" duration="233000" />
+      <workItem from="1598396615935" duration="16773000" />
+      <workItem from="1598575453959" duration="1150000" />
+      <workItem from="1598740426513" duration="8896000" />
+      <workItem from="1598896883177" duration="4710000" />
+      <workItem from="1602008310519" duration="359000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="210" y="135" width="1089" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597497494509">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state x="210" y="135" width="1089" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/68.0.1372.960@68.0.1372.960" timestamp="1597497494509" />
+    <state x="324" y="409" width="388" height="365" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog" timestamp="1598489176313">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state x="529" y="613" width="314" height="547" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/62.0.2498.1440@62.0.2498.1440" timestamp="1596642953603" />
+    <state x="324" y="409" width="388" height="365" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/68.0.1372.960@68.0.1372.960" timestamp="1598489176313" />
+    <state x="636" y="224" key="#xdebugger.evaluate" timestamp="1598489798561">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state x="636" y="224" key="#xdebugger.evaluate/68.0.1372.960@68.0.1372.960" timestamp="1598489798561" />
+    <state width="628" height="582" key="DebuggerActiveHint" timestamp="1598489749667">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state width="628" height="582" key="DebuggerActiveHint/68.0.1372.960@68.0.1372.960" timestamp="1598489749667" />
+    <state x="164" y="353" key="FileChooserDialogImpl" timestamp="1597589698778">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state x="237" y="530" key="FileChooserDialogImpl/62.0.2498.1440@62.0.2498.1440" timestamp="1596644396214" />
+    <state x="164" y="353" key="FileChooserDialogImpl/68.0.1372.960@68.0.1372.960" timestamp="1597589698778" />
+    <state width="1317" height="299" key="GridCell.Tab.0.bottom" timestamp="1598749588314">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state width="2455" height="413" key="GridCell.Tab.0.bottom/62.0.2498.1440@62.0.2498.1440" timestamp="1596725580150" />
+    <state width="1317" height="299" key="GridCell.Tab.0.bottom/68.0.1372.960@68.0.1372.960" timestamp="1598749588314" />
+    <state width="1317" height="299" key="GridCell.Tab.0.center" timestamp="1598749588314">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state width="2455" height="413" key="GridCell.Tab.0.center/62.0.2498.1440@62.0.2498.1440" timestamp="1596725580149" />
+    <state width="1317" height="299" key="GridCell.Tab.0.center/68.0.1372.960@68.0.1372.960" timestamp="1598749588314" />
+    <state width="1317" height="299" key="GridCell.Tab.0.left" timestamp="1598749588314">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state width="2455" height="413" key="GridCell.Tab.0.left/62.0.2498.1440@62.0.2498.1440" timestamp="1596725580149" />
+    <state width="1317" height="299" key="GridCell.Tab.0.left/68.0.1372.960@68.0.1372.960" timestamp="1598749588314" />
+    <state width="1317" height="299" key="GridCell.Tab.0.right" timestamp="1598749588314">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state width="2455" height="413" key="GridCell.Tab.0.right/62.0.2498.1440@62.0.2498.1440" timestamp="1596725580149" />
+    <state width="1317" height="299" key="GridCell.Tab.0.right/68.0.1372.960@68.0.1372.960" timestamp="1598749588314" />
+    <state width="1317" height="299" key="GridCell.Tab.1.bottom" timestamp="1598749588314">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state width="1317" height="299" key="GridCell.Tab.1.bottom/68.0.1372.960@68.0.1372.960" timestamp="1598749588314" />
+    <state width="1317" height="299" key="GridCell.Tab.1.center" timestamp="1598749588314">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state width="1317" height="299" key="GridCell.Tab.1.center/68.0.1372.960@68.0.1372.960" timestamp="1598749588314" />
+    <state width="1317" height="299" key="GridCell.Tab.1.left" timestamp="1598749588314">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state width="1317" height="299" key="GridCell.Tab.1.left/68.0.1372.960@68.0.1372.960" timestamp="1598749588314" />
+    <state width="1317" height="299" key="GridCell.Tab.1.right" timestamp="1598749588314">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state width="1317" height="299" key="GridCell.Tab.1.right/68.0.1372.960@68.0.1372.960" timestamp="1598749588314" />
+    <state x="137" y="78" key="SettingsEditor" timestamp="1598575246577">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state x="187" y="368" key="SettingsEditor/62.0.2498.1440@62.0.2498.1440" timestamp="1596646936043" />
+    <state x="137" y="78" key="SettingsEditor/68.0.1372.960@68.0.1372.960" timestamp="1598575246577" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1597875568657">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/68.0.1372.960@68.0.1372.960" timestamp="1597875568657" />
+    <state x="461" y="0" width="687" height="960" key="find.popup" timestamp="1598744656725">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state x="461" y="0" width="687" height="960" key="find.popup/68.0.1372.960@68.0.1372.960" timestamp="1598744656725" />
+    <state width="750" height="535" key="javadoc.popup" timestamp="1598747184880">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state width="750" height="535" key="javadoc.popup/68.0.1372.960@68.0.1372.960" timestamp="1598747184880" />
+    <state x="560" y="230" key="refactoring.ChangeSignatureDialog" timestamp="1598742770110">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state x="560" y="230" key="refactoring.ChangeSignatureDialog/68.0.1372.960@68.0.1372.960" timestamp="1598742770110" />
+    <state x="417" y="205" width="840" height="678" key="search.everywhere.popup" timestamp="1598747121357">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state x="417" y="205" width="840" height="678" key="search.everywhere.popup/68.0.1372.960@68.0.1372.960" timestamp="1598747121357" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="tests">
+        <watch expression="model" language="Python" />
+        <watch expression="Model" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_ops_TestListResultOpNode_test_gt.coverage" NAME="pytest for test_ops.TestListResultOpNode.test_gt Coverage Results" MODIFIED="1598743281770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_csv_database_TestCsvDatabase_test_load_model.coverage" NAME="pytest for test_csv_database.TestCsvDatabase.test_load_model Coverage Results" MODIFIED="1598056067188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_column_TestIntegerColumnType_test_compatible_type.coverage" NAME="pytest for test_column.TestIntegerColumnType.test_compatible_type Coverage Results" MODIFIED="1596648114668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_in_test_column_py.coverage" NAME="pytest in test_column.py Coverage Results" MODIFIED="1597504456155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_ops_TestOpNode.coverage" NAME="pytest for test_ops.TestOpNode Coverage Results" MODIFIED="1598574242137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_model_TestModel_test_has_field.coverage" NAME="pytest for test_model.TestModel.test_has_field Coverage Results" MODIFIED="1598488256690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_column_TestColumn_test_compatible_type.coverage" NAME="pytest for test_column.TestColumn.test_compatible_type Coverage Results" MODIFIED="1596648118434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_model_TestModel.coverage" NAME="pytest for test_model.TestModel Coverage Results" MODIFIED="1598488632111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_csv_database_TestCsvDatabase_test_validate_path_path_dne.coverage" NAME="pytest for test_csv_database.TestCsvDatabase.test_validate_path_path_dne Coverage Results" MODIFIED="1597689166823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_model_TestModel_test_has_tag.coverage" NAME="pytest for test_model.TestModel.test_has_tag Coverage Results" MODIFIED="1598397536132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_column_TestColumn.coverage" NAME="pytest for test_column.TestColumn Coverage Results" MODIFIED="1597497798519" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_ops_TestListResultOpNode_test_eq.coverage" NAME="pytest for test_ops.TestListResultOpNode.test_eq Coverage Results" MODIFIED="1598742676708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_ops_TestListResultOpNode_test_lte.coverage" NAME="pytest for test_ops.TestListResultOpNode.test_lte Coverage Results" MODIFIED="1598743000322" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_ops_TestListResultOpNode_test_lt.coverage" NAME="pytest for test_ops.TestListResultOpNode.test_lt Coverage Results" MODIFIED="1598742952072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_column_TestFloatColumnType_test_cast.coverage" NAME="pytest for test_column.TestFloatColumnType.test_cast Coverage Results" MODIFIED="1596724723618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$Unittests_for_test_column_TestIntegerColumnType_test_cast.coverage" NAME="Unittests for test_column.TestIntegerColumnType.test_cast Coverage Results" MODIFIED="1596648076070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_column_TestFloatColumnType.coverage" NAME="pytest for test_column.TestFloatColumnType Coverage Results" MODIFIED="1596724488080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_csv_database_TestCsvDatabase_test_convert_row_to_class_instance.coverage" NAME="pytest for test_csv_database.TestCsvDatabase.test_convert_row_to_class_instance Coverage Results" MODIFIED="1597686046215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_in_tests.coverage" NAME="pytest in tests Coverage Results" MODIFIED="1596724393266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_ops_TestOpNode_test_find_columns.coverage" NAME="pytest for test_ops.TestOpNode.test_find_columns Coverage Results" MODIFIED="1598748752513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_ops_TestOpNode_test_find_in_parents.coverage" NAME="pytest for test_ops.TestOpNode.test_find_in_parents Coverage Results" MODIFIED="1598574269077" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_column_TestFloatColumnType_test_compatible_type.coverage" NAME="pytest for test_column.TestFloatColumnType.test_compatible_type Coverage Results" MODIFIED="1596724499861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_datatabase_test_query.coverage" NAME="pytest for test_datatabase.test_query Coverage Results" MODIFIED="1598058097719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_ops_TestComparisonOp_test_find_where_field.coverage" NAME="pytest for test_ops.TestComparisonOp.test_find_where_field Coverage Results" MODIFIED="1598747674803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_ops_TestListResultOpNode.coverage" NAME="pytest for test_ops.TestListResultOpNode Coverage Results" MODIFIED="1598741797384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_ops_TestListResultOpNode_test_gte.coverage" NAME="pytest for test_ops.TestListResultOpNode.test_gte Coverage Results" MODIFIED="1598743323081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$Unittests_for_test_column_TestColumn.coverage" NAME="Unittests for test_column.TestColumn Coverage Results" MODIFIED="1596645027151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_column_TestDateColumnType_test_cast.coverage" NAME="pytest for test_column.TestDateColumnType.test_cast Coverage Results" MODIFIED="1596725271746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_csv_database_TestCsvDatabase_test_load_model2.coverage" NAME="pytest for test_csv_database.TestCsvDatabase.test_load_model2 Coverage Results" MODIFIED="1598051725467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$Unittests_for_test_column_TestIntegerColumnType.coverage" NAME="Unittests for test_column.TestIntegerColumnType Coverage Results" MODIFIED="1596724451109" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+  </component>
+</project>
