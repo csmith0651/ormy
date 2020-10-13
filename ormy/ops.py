@@ -208,10 +208,10 @@ class QueryOp(OpNode):
 
     # what operations can happen on a QueryOp result?
 
-    def where(self, field):
+    def field(self, field):
         assert self.model.has_field(field), "model '%s' does not have field '%s'" % (self.model.__name__, field)
         return WhereOp(field, self)
 
-    def where_tag(self, tag):
+    def field_tag(self, tag):
         assert self.model.has_tag(tag), "model '%s' does not have tag '%s'" % (self.model.__name__, tag)
         return WhereTagOp(tag, self)
