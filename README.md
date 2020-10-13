@@ -35,9 +35,9 @@ Operations that can be performed on a list of results
 
 ## QueryOp
 * eval() - evaluate the query on the model specified for the query
-* where(field) - select a field within the model to perform a comparison operation on. This returns a WhereOp.
+* field(field) - select a field within the model to perform a comparison operation on. This returns a WhereOp.
   A where clause must be paired with a comparsion operator.
-* where_tag(tag) - select a collection of fields, by tag, to perform a comparison operation on.
+* field_tag(tag) - select a collection of fields, by tag, to perform a comparison operation on.
   This returns a WhereTagOp. A where_tag clause must be paired with a comparsion operator.
 * limit(int) -- limit the number of results.
 
@@ -47,8 +47,8 @@ Operations that can be performed on a list of results
 Generate data results.
 
 * db.query(Model).exec()
-* db.query(Model).where(value).exec()
-* db.query(Model).where(value).COMP(value).exec()
+* db.query(Model).field(value).exec()
+* db.query(Model).field(value).COMP(value).exec()
 * (DNE) db.query(Model).limit(int).exec()
 * (DNE) db.query(Model).join(Model).oneq(f1,f2).exec()
 
@@ -60,7 +60,7 @@ db.COMP()
 
 The operations between query(X) and .exec() define a filter function. This filter function
 is applied as the data is being loaded. In the case of `query(x).exec()` the filter function
-is a NoOp, i.e. empty. In the case of query(X).where('amount').eq(50).exec() this creates
+is a NoOp, i.e. empty. In the case of query(X).field('amount').eq(50).exec() this creates
 a filter function restricting the loaded data to where the amount field is 50. 
 
 
