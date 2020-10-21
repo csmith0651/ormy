@@ -35,10 +35,10 @@ Operations that can be performed on a list of results
 
 ## QueryOp
 * eval() - evaluate the query on the model specified for the query
-* field(field) - select a field within the model to perform a comparison operation on. This returns a WhereOp.
-  A where clause must be paired with a comparsion operator.
+* field(field) - select a field within the model to perform a comparison operation on. This returns a FieldOp.
+  A field clause must be paired with a comparsion operator.
 * field_tag(tag) - select a collection of fields, by tag, to perform a comparison operation on.
-  This returns a WhereTagOp. A where_tag clause must be paired with a comparsion operator.
+  This returns a FieldTagOp. A field_tag clause must be paired with a comparsion operator.
 * limit(int) -- limit the number of results.
 
 
@@ -61,7 +61,7 @@ db.COMP()
 The operations between query(X) and .exec() define a filter function. This filter function
 is applied as the data is being loaded. In the case of `query(x).exec()` the filter function
 is a NoOp, i.e. empty. In the case of query(X).field('amount').eq(50).exec() this creates
-a filter function restricting the loaded data to where the amount field is 50. 
+a filter function restricting the loaded data to field the amount field is 50. 
 
 
 

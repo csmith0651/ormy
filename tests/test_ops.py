@@ -70,22 +70,22 @@ class TestListResultOpNode:
 
 
 class TestComparisonOp:
-    def test_find_where_field(self, tmpdir):
+    def test_find_field(self, tmpdir):
         db = CsvDatabase(str(tmpdir))
         eq = db.query(ModelForTest).field('intcol').eq(50)
-        assert eq.find_where_fields() == ['intcol']
+        assert eq.find_field() == ['intcol']
 
         eq = db.query(ModelForTest).field_tag('t1').eq(50)
-        assert eq.find_where_fields() == ['intcol']
+        assert eq.find_field() == ['intcol']
 
         eq = db.query(ModelForTest).field_tag('t2').eq(50)
-        assert eq.find_where_fields() == ['intcol', 'floatcol']
+        assert eq.find_field() == ['intcol', 'floatcol']
 
         eq = db.query(ModelForTest).field_tag('t3').eq(50)
-        assert eq.find_where_fields() == ['floatcol']
+        assert eq.find_field() == ['floatcol']
 
         eq = db.query(ModelForTest).field_tag('t4').eq(50)
-        assert eq.find_where_fields() == ['stringcol']
+        assert eq.find_field() == ['stringcol']
 
     def test_filter_list(self, tmpdir):
         db = CsvDatabase(str(tmpdir))
@@ -112,20 +112,20 @@ class TestComparisonOp:
         assert 1111.1 in intcols
 
 
-class TestWhereOp:
-    def test_where_op(self, tmpdir):
+class TestFieldOp:
+    def test_field_op(self, tmpdir):
         db = CsvDatabase(str(tmpdir))
-        where = db.query(ModelForTest).field('stringcol')
-        assert where.where_fields == ['stringcol']
+        field = db.query(ModelForTest).field('stringcol')
+        assert field.field_fields == ['stringcol']
 
 
-class TestWhereTagOp:
-    def test_where_tag_op(self, tmpdir):
+class TestFieldTagOp:
+    def test_field_tag_op(self, tmpdir):
         db = CsvDatabase(str(tmpdir))
-        where = db.query(ModelForTest).field_tag('t2')
-        assert len(where.where_fields) == 2
-        assert 'intcol' in where.where_fields
-        assert 'floatcol' in where.where_fields
+        field = db.query(ModelForTest).field_tag('t2')
+        assert len(field.field_fields) == 2
+        assert 'intcol' in field.field_fields
+        assert 'floatcol' in field.field_fields
 
 
 class NonModelForTest(object):
@@ -142,14 +142,14 @@ class TestQueryOp:
     # def test_eval(self):
     #     assert False
 
-    def test_where(self, tmpdir):
+    def test_field(self, tmpdir):
         db = CsvDatabase(str(tmpdir))
         with pytest.raises(AssertionError) as error:
-            where = db.query(ModelForTest).field('badcol')
+            field = db.query(ModelForTest).field('badcol')
         assert "model 'ModelForTest' does not have field 'badcol'" == str(error.value)
 
-    def test_where_tag(self, tmpdir):
+    def test_field_tag(self, tmpdir):
         db = CsvDatabase(str(tmpdir))
         with pytest.raises(AssertionError) as error:
-            where = db.query(ModelForTest).field_tag('badtag')
+            field = db.query(ModelForTest).field_tag('badtag')
         assert "model 'ModelForTest' does not have tag 'badtag'" == str(error.value)

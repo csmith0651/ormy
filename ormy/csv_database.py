@@ -9,6 +9,7 @@ log = logging.getLogger(__name__)
 
 class CsvDatabase(Database):
     def __init__(self, path_to_database):
+        super().__init__()
         self.validate_path(path_to_database)
         self.path = path_to_database
 

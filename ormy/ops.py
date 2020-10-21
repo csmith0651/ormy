@@ -95,13 +95,13 @@ class ComparisonOp(ListResultOpNode):
         super().__init__(parent)
         self.comparison_value = value
 
-    def find_where_fields(self):
+    def find_field(self):
         current_op = self.parent
         while current_op is not None:
-            if isinstance(current_op, WhereOpBase):
-                return current_op.where_fields
+            if isinstance(current_op, FieldOpBase):
+                return current_op.field_fields
             current_op = current_op.parent
-        raise OpError('no where clause to bind %s to' % type_str(self))
+        raise OpError('no field clause to bind %s to' % type_str(self))
 
     def filter_list(self, fields, comparison_value, data):
         filtered_list = []
@@ -115,14 +115,14 @@ class ComparisonOp(ListResultOpNode):
 
     def eval(self):
         parent_results = self.parent.eval()
-        where_fields = self.find_where_fields()
-        where_columns = self.find_columns(where_fields)
-        for column in where_columns:
+        fields = self.find_field()
+        columns = self.find_columns(fields)
+        for column in columns:
             if not column.compatible_type(self.comparison_value):
                 raise OpError('incompatible types value %s (type %s) and column %s (type %s)'
                               % (self.comparison_value, type_str(self.comparison_value), column.field,
                                  type_str(column.column_type)))
-        results = self.filter_list(where_fields, self.comparison_value, parent_results)
+        results = self.filter_list(fields, self.comparison_value, parent_results)
         return results
 
 
@@ -166,7 +166,7 @@ class LtEOp(ComparisonOp):
         return field_value <= comparison_value
 
 
-class WhereOpBase(ListResultOpNode):
+class FieldOpBase(ListResultOpNode):
     def __init__(self, parent):
         super().__init__(parent)
 
@@ -174,16 +174,16 @@ class WhereOpBase(ListResultOpNode):
         return self.parent.eval()
 
 
-class WhereOp(WhereOpBase):
+class FieldOp(FieldOpBase):
     def __init__(self, field, parent):
         super().__init__(parent)
-        self.where_fields = [field]
+        self.field_fields = [field]
 
 
-class WhereTagOp(WhereOpBase):
+class FieldTagOp(FieldOpBase):
     def __init__(self, tag, parent):
         super().__init__(parent)
-        self.where_tag = tag
+        self.field_tag = tag
 
         found, model = self.find_in_parents('model')
         assert found
@@ -191,7 +191,7 @@ class WhereTagOp(WhereOpBase):
         if len(tag_columns) == 0:
             raise OpError("no columns have tag '%s'" % tag)
 
-        self.where_fields = list(map(lambda c: c.field, tag_columns))
+        self.field_fields = list(map(lambda c: c.field, tag_columns))
 
 
 class QueryOp(OpNode):
@@ -210,8 +210,10 @@ class QueryOp(OpNode):
 
     def field(self, field):
         assert self.model.has_field(field), "model '%s' does not have field '%s'" % (self.model.__name__, field)
-        return WhereOp(field, self)
+        self.left = FieldOp(field, self)
+        return self.left
 
     def field_tag(self, tag):
         assert self.model.has_tag(tag), "model '%s' does not have tag '%s'" % (self.model.__name__, tag)
-        return WhereTagOp(tag, self)
+        self.left = FieldTagOp(tag, self)
+        return self.left
