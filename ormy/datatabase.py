@@ -42,7 +42,7 @@ class QueryNode(CodeQueryBase):
     def __str__(self):
         return "query(model='%s')" % self.model.__name__
 
-
+# noinspection PyPep8Naming
 class FieldNode(CodeQueryBase):
     def __init__(self, field, context):
         # TODO: check to see if the field is legal for this model to create a compile time-error rather than
@@ -54,18 +54,58 @@ class FieldNode(CodeQueryBase):
         self.child = EqNode(self.context)
         return self.child
 
+    def AND(self):
+        self.child = AndNode(self.context)
+        return self.child
+
+    def OR(self):
+        self.child = OrNode(self.context)
+        return self.child
+
     def __str__(self):
         return "field('%s')" % self.field
 
 # TODO: Add support for AndNode and OrNode to support complex boolean queries.
 
 
+class ConjunctionNode(CodeQueryBase):
+    def __init__(self, context):
+        super().__init__(context)
+
+    @abstractmethod
+    def __str__(self):
+        pass
+
+    def value(self, value):
+        self.child = ValueNode(value, self.context)
+        return self.child
+
+    def field(self, field):
+        self.child = FieldNode(field, self.context)
+        return self.child
+
+
+class OrNode(ConjunctionNode):
+    def __init__(self, context):
+        super().__init__(context)
+
+    def __str__(self):
+        return "OR()"
+
+
+class AndNode(ConjunctionNode):
+    def __init__(self, context):
+        super().__init__(context)
+
+    def __str__(self):
+        return "AND()"
+
 class CompNode(CodeQueryBase):
     def __init__(self, context):
         super().__init__(context)
 
     def value(self, value):
-        self.child = Value(value, self.context)
+        self.child = ValueNode(value, self.context)
         return self.child
 
     def field(self, field):
@@ -85,13 +125,22 @@ class EqNode(CompNode):
         return "eq()"
 
 
-class Value(CodeQueryBase):
+# noinspection PyPep8Naming
+class ValueNode(CodeQueryBase):
     def __init__(self, value, context):
         super().__init__(context)
         self.value = value
 
     def exec(self):
         return self.context.eval_query()
+
+    def AND(self):
+        self.child = AndNode(self.context)
+        return self.child
+
+    def OR(self):
+        self.child = OrNode(self.context)
+        return self.child
 
     def __str__(self):
         return "value(%s)" % self.value
@@ -110,8 +159,10 @@ class Database(ABC):
     @classmethod
     def _convert_query_to_raw_expressions(cls, query):
         ret = []
+
+        # TODO: move the conversion from Node to Expr into the Node classes as a convert function
         while query is not None:
-            if isinstance(query, Value):
+            if isinstance(query, ValueNode):
                 ret.append(ValueExpr(query.value))
             elif isinstance(query, EqNode):
                 ret.append(EqExpr())
@@ -119,6 +170,10 @@ class Database(ABC):
                 ret.append(FieldExpr(query.field))
             elif isinstance(query, QueryNode):
                 ret.append(QueryExpr(query.model))
+            elif isinstance(query, AndNode):
+                ret.append(AndExpr())
+            elif isinstance(query, OrNode):
+                ret.append(OrExpr())
             else:
                 raise DatabaseException('unknown query object "%s"' % query.__name__)
 

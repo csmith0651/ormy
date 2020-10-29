@@ -38,5 +38,8 @@ class TestDatabase:
         expr_tree = Database().query(TestModel).field('f1').eq().value(100).compile()
         assert expr_tree == QueryExpr(TestModel).children(EqExpr().children(FieldExpr('f1'), ValueExpr(100)))
 
-
-
+    def test_convert_query_and(self):
+        expr_tree = Database().query(TestModel).field('f1').eq().value(100).AND().field('f2').eq().value(200).compile()
+        assert expr_tree == QueryExpr(TestModel).children(AndExpr()
+                                                          .children(EqExpr().children(FieldExpr('f1'), ValueExpr(100)),
+                                                                    EqExpr().children(FieldExpr('f2'), ValueExpr(200))))

@@ -88,25 +88,57 @@ class CompExpr(OperatorExpr):
     def __init__(self, op_str):
         super().__init__()
         self.op_str = op_str
-        self.left = None
-        self.right = None
 
     def operand_count(self):
         return 2
 
     def precedence(self):
         # TODO: fill in with proper precedence
-        return 2
+        return 12
 
     @abstractmethod
     def perform_compare(self, a, b):
         pass
 
     def __str__(self):
-        return "%s()" % self.op_str
+        return "%s( %s ,%s )" % (self.op_str, self.left, self.right)
 
     def __eq__(self, other):
         return super().__eq__(other) and self.left == other.left and self.right == other.right
+
+
+class ConjunctionExpr(OperatorExpr):
+    def __init__(self):
+        super().__init__()
+
+    def operand_count(self):
+        return 2
+
+    @abstractmethod
+    def precedence(self):
+        pass
+
+
+class OrExpr(ConjunctionExpr):
+    def __init__(self):
+        super().__init__()
+
+    def __str__(self):
+        return 'or( %s , %s )' % (self.left, self.right)
+
+    def precedence(self):
+        return 9
+
+
+class AndExpr(ConjunctionExpr):
+    def __init__(self):
+        super().__init__()
+
+    def __str__(self):
+        return 'and( %s , %s )' % (self.left, self.right)
+
+    def precedence(self):
+        return 10
 
 
 class EqExpr(CompExpr):
@@ -145,7 +177,7 @@ class QueryExpr(OperatorExpr):
         return super().__eq__(other) and (self.model == other.model) and (self.left == other.left)
 
     def __str__(self):
-        return "query(%s)" % self.model.__name__
+        return "query( %s )" % self.model.__name__
 
 
 class QueryContext(object):
@@ -237,7 +269,7 @@ class QueryEngine(ABC):
                 # todo: is there a builtin operation to pop off the last N elements?
                 children = []
                 for i in range(0, top.operand_count()):
-                    children.insert(0, and_stack.pop())
+                    children.append(and_stack.pop())
                 Expr.attach_operands(top, children)
                 and_stack.append(top)
             elif cur_expr.is_operand():
@@ -256,7 +288,7 @@ class QueryEngine(ABC):
                 # todo: is there a builtin operation to pop off the last N elements?
                 children = []
                 for i in range(0, top.operand_count()):
-                    children.insert(0, and_stack.pop())
+                    children.append(and_stack.pop())
                 Expr.attach_operands(top, children)
                 and_stack.append(top)
             else:

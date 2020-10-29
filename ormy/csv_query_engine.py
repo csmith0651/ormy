@@ -32,17 +32,21 @@ class CsvQueryEngine(QueryEngine):
         return data
 
     def _run(self, expr, context: ExprContext):
+        # TODO: if not moved into the Expr tree, could move to QueryEngine and only have platform dependent
+        #   operations here.
         if isinstance(expr, QueryExpr):
             # TODO: check for limit and sort
             return self.load(expr, context)
         elif issubclass(type(expr), CompExpr):
-            left_value = self._run(expr.left, context)
-            right_value = self._run(expr.right, context)
-            return expr.perform_compare(left_value, right_value)
+            return expr.perform_compare(self._run(expr.left, context), self._run(expr.right, context))
         elif isinstance(expr, FieldExpr):
             return getattr(context.model_data, expr.field)
         elif isinstance(expr, ValueExpr):
             return expr.value
+        elif isinstance(expr, AndExpr):
+            return self._run(expr.left, context) and self._run(expr.right, context)
+        elif isinstance(expr, OrExpr):
+            return self._run(expr.left, context) or self._run(expr.right, context)
         else:
             raise QueryEngineException("trying to execute unknown expr type '%s'" % expr.__name_)
 

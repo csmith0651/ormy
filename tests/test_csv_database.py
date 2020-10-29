@@ -90,3 +90,33 @@ class TestCsvDatabase:
         assert isinstance(m2.stringcol, str) and m2.stringcol == 'foobar'
         d = datetime.strptime('2020-08-19 17:44:49.732176', FORMAT_STR)
         assert isinstance(m2.datecol, datetime) and m2.datecol == d
+
+    def test_query_and(self, tmpdir):
+        f1 = tmpdir.join("f1.csv")
+        f1.write("""intcol,floatcol,stringcol,datecol
+100,1.00234,foobar1,2020-08-19 17:44:49.732176
+101,1.00234,foobar2,2020-08-19 17:44:49.732176
+102,1.00234,foobar3,2020-08-19 17:44:49.732176
+100,1.00234,foobar4,2020-08-19 17:44:49.732176
+""")
+        db = CsvDatabase(str(tmpdir))
+        data = db.query(F1Model).field('intcol').eq().value(100).AND().field('stringcol').eq().value('foobar4').exec()
+        assert len(data) == 1
+        m = data[0]
+        assert m.intcol == 100 and m.stringcol == 'foobar4'
+
+    def test_query_or(self, tmpdir):
+        f1 = tmpdir.join("f1.csv")
+        f1.write("""intcol,floatcol,stringcol,datecol
+100,1.00234,foobar1,2020-08-19 17:44:49.732176
+101,1.00234,foobar2,2020-08-19 17:44:49.732176
+102,1.00234,foobar3,2020-08-19 17:44:49.732176
+100,1.00234,foobar4,2020-08-19 17:44:49.732176
+""")
+        db = CsvDatabase(str(tmpdir))
+        data = db.query(F1Model).field('intcol').eq().value(102).OR().field('stringcol').eq().value('foobar2').exec()
+        assert len(data) == 2
+        m1 = data[0]
+        m2 = data[1]
+        assert m1.intcol == 101 and m1.stringcol == 'foobar2'
+        assert m2.intcol == 102 and m2.stringcol == 'foobar3'
