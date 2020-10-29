@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aa3b57c9-27b5-4416-ba44-9e0373190a28" name="Default Changelist" comment="change from where to field">
+      <change afterPath="$PROJECT_DIR$/ormy/query_engine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_query_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ormy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ormy.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ormy/column.py" beforeDir="false" afterPath="$PROJECT_DIR$/ormy/column.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ormy/csv_database.py" beforeDir="false" afterPath="$PROJECT_DIR$/ormy/csv_database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ormy/datatabase.py" beforeDir="false" afterPath="$PROJECT_DIR$/ormy/datatabase.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ormy/ops.py" beforeDir="false" afterPath="$PROJECT_DIR$/ormy/ops.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_datatabase.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_datatabase.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="BRANCH" value="master" />
+  </component>
+  <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JupyterTrust" id="8e01f2cd-a94b-4b88-ab5b-a2a08fa28744" />
+  <component name="ProjectId" id="1fEZ1lKUS9Xh17lz6LEbVJXMCzF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/ormy/column.py" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Craig\OneDrive\src\ormy\ormy" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.pytest for test_query_engine.TestQueryEngine.test_convert_query_to_expr_tree_simple_filter">
+    <configuration name="pytest for test_query_engine.TestEricCraig.test_eric_craig" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="ormy" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_query_engine.TestEricCraig.test_eric_craig&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_query_engine.TestQueryEngine" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="ormy" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_query_engine.TestQueryEngine&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_query_engine.TestQueryEngine.test_convert_query_to_expr_tree_no_ops" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="ormy" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_query_engine.TestQueryEngine.test_convert_query_to_expr_tree_no_ops&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_query_engine.TestQueryEngine.test_convert_query_to_expr_tree_simple_filter" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="ormy" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_query_engine.TestQueryEngine.test_convert_query_to_expr_tree_simple_filter&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in tests" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="ormy" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python tests.pytest for test_query_engine.TestEricCraig.test_eric_craig" />
+      <item itemvalue="Python tests.pytest for test_query_engine.TestQueryEngine" />
+      <item itemvalue="Python tests.pytest for test_query_engine.TestQueryEngine.test_convert_query_to_expr_tree_no_ops" />
+      <item itemvalue="Python tests.pytest for test_query_engine.TestQueryEngine.test_convert_query_to_expr_tree_simple_filter" />
+      <item itemvalue="Python tests.pytest in tests" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.pytest in tests" />
+        <item itemvalue="Python tests.pytest for test_query_engine.TestQueryEngine.test_convert_query_to_expr_tree_simple_filter" />
+        <item itemvalue="Python tests.pytest for test_query_engine.TestQueryEngine.test_convert_query_to_expr_tree_no_ops" />
+        <item itemvalue="Python tests.pytest for test_query_engine.TestQueryEngine" />
+        <item itemvalue="Python tests.pytest for test_query_engine.TestEricCraig.test_eric_craig" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aa3b57c9-27b5-4416-ba44-9e0373190a28" name="Default Changelist" comment="" />
+      <created>1595784999652</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1595784999652</updated>
+      <workItem from="1595785018226" duration="1241000" />
+      <workItem from="1596046866749" duration="39000" />
+      <workItem from="1596642273880" duration="10049000" />
+      <workItem from="1597493856545" duration="10739000" />
+      <workItem from="1597667826417" duration="10966000" />
+      <workItem from="1597756314366" duration="1302000" />
+      <workItem from="1597870076490" duration="7531000" />
+      <workItem from="1598048477086" duration="10596000" />
+      <workItem from="1598272305938" duration="1525000" />
+      <workItem from="1598290201708" duration="411000" />
+      <workItem from="1598396043592" duration="233000" />
+      <workItem from="1598396615935" duration="16773000" />
+      <workItem from="1598575453959" duration="1150000" />
+      <workItem from="1598740426513" duration="8896000" />
+      <workItem from="1598896883177" duration="4710000" />
+      <workItem from="1602008310519" duration="282000" />
+      <workItem from="1602010778374" duration="6583000" />
+      <workItem from="1602075229215" duration="492000" />
+      <workItem from="1602076136327" duration="4423000" />
+      <workItem from="1602159165049" duration="596000" />
+      <workItem from="1602181894270" duration="2445000" />
+      <workItem from="1602191765331" duration="56000" />
+      <workItem from="1602245579143" duration="1290000" />
+      <workItem from="1602246904147" duration="2132000" />
+      <workItem from="1602250315038" duration="6924000" />
+      <workItem from="1602266553807" duration="3476000" />
+      <workItem from="1602334719656" duration="2488000" />
+      <workItem from="1602348384870" duration="1928000" />
+      <workItem from="1602502296036" duration="18245000" />
+      <workItem from="1602596245385" duration="12647000" />
+      <workItem from="1602675239662" duration="8262000" />
+      <workItem from="1602690818088" duration="2416000" />
+      <workItem from="1602710092252" duration="7577000" />
+      <workItem from="1602961853516" duration="6983000" />
+      <workItem from="1603109418781" duration="2791000" />
+      <workItem from="1603116915373" duration="44529000" />
+      <workItem from="1603404353091" duration="38000" />
+      <workItem from="1603449143259" duration="521000" />
+      <workItem from="1603545701663" duration="4316000" />
+      <workItem from="1603723061148" duration="51000" />
+      <workItem from="1603723120476" duration="9846000" />
+      <workItem from="1603809593006" duration="2746000" />
+    </task>
+    <task id="LOCAL-00001" summary="added venv">
+      <created>1602511056074</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602511056074</updated>
+    </task>
+    <task id="LOCAL-00002" summary="change where and where_tag to field and field_tag">
+      <created>1602602151310</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1602602151311</updated>
+    </task>
+    <task id="LOCAL-00003" summary="change where and where_tag to field and field_tag">
+      <created>1602602229028</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1602602229028</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update readme.">
+      <created>1602602462004</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1602602462004</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add venv">
+      <created>1602603032480</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1602603032480</updated>
+    </task>
+    <task id="LOCAL-00006" summary="remove venv dir.">
+      <created>1602604154001</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1602604154001</updated>
+    </task>
+    <task id="LOCAL-00007" summary="change from where to field func">
+      <created>1602605211041</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1602605211041</updated>
+    </task>
+    <task id="LOCAL-00008" summary="change from where to field">
+      <created>1603284577839</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1603284577839</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added venv" />
+    <MESSAGE value="change where and where_tag to field and field_tag" />
+    <MESSAGE value="update readme." />
+    <MESSAGE value="add venv" />
+    <MESSAGE value="remove venv dir." />
+    <MESSAGE value="change from where to field func" />
+    <MESSAGE value="change from where to field" />
+    <option name="LAST_COMMIT_MESSAGE" value="change from where to field" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="750" y="393" key="#Notifications" timestamp="1603390344646">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state x="750" y="393" key="#Notifications/62.0.2498.1440@62.0.2498.1440" timestamp="1603390344646" />
+    <state x="446" y="262" key="#Notifications/68.0.1372.960@68.0.1372.960" timestamp="1602182597353" />
+    <state x="903" y="360" key="#Plugins" timestamp="1603390354950">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state x="903" y="360" key="#Plugins/62.0.2498.1440@62.0.2498.1440" timestamp="1603390354950" />
+    <state x="205" y="135" width="1094" height="767" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603546995255">
+      <screen x="62" y="0" width="1378" height="960" />
+    </state>
+    <state x="205" y="135" width="1094" height="767" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.0.1378.960@62.0.1378.960" timestamp="1603546995255" />
+    <state x="210" y="135" width="1089" height="743" key="#com.intellij.execution.impl.EditConfigurationsDialog/68.0.1372.960@68.0.1372.960" timestamp="1602076698748" />
+    <state x="154" y="92" width="2314" height="1256" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1602170301676">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state x="154" y="92" width="2314" height="1256" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/62.0.2498.1440@62.0.2498.1440" timestamp="1602170301676" />
+    <state x="1116" y="435" key="#com.intellij.ide.util.MemberChooser" timestamp="1603121781438">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state x="1116" y="435" key="#com.intellij.ide.util.MemberChooser/62.0.2498.1440@62.0.2498.1440" timestamp="1603121781438" />
+    <state x="336" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602610043622">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state x="336" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/68.0.1372.960@68.0.1372.960" timestamp="1602610043622" />
+    <state x="485" y="227" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602508517444">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state x="485" y="227" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/68.0.1372.960@68.0.1372.960" timestamp="1602508517444" />
+    <state x="1109" y="626" key="#com.jetbrains.python.refactoring.move.PyMakeFunctionTopLevelDialog" timestamp="1603281386036">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state x="1109" y="626" key="#com.jetbrains.python.refactoring.move.PyMakeFunctionTopLevelDialog/62.0.2498.1440@62.0.2498.1440" timestamp="1603281386036" />
+    <state x="529" y="613" width="388" height="365" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog" timestamp="1603286054202">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state x="529" y="613" width="314" height="547" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/62.0.2498.1440@62.0.2498.1440" timestamp="1603286054202" />
+    <state x="324" y="409" width="388" height="365" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/68.0.1372.960@68.0.1372.960" timestamp="1598489176313" />
+    <state x="636" y="224" key="#xdebugger.evaluate" timestamp="1598489798561">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state x="636" y="224" key="#xdebugger.evaluate/68.0.1372.960@68.0.1372.960" timestamp="1598489798561" />
+    <state x="936" y="288" key="CommitChangelistDialog2" timestamp="1603284560589">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state x="936" y="288" key="CommitChangelistDialog2/62.0.2498.1440@62.0.2498.1440" timestamp="1603284560589" />
+    <state width="628" height="582" key="DebuggerActiveHint" timestamp="1598489749667">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state width="628" height="582" key="DebuggerActiveHint/68.0.1372.960@68.0.1372.960" timestamp="1598489749667" />
+    <state x="161" y="93" width="1187" height="775" maximized="true" key="DiffContextDialog" timestamp="1603281584069">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state x="161" y="93" width="1187" height="775" maximized="true" key="DiffContextDialog/68.0.1372.960@68.0.1372.960" timestamp="1602610800984" />
+    <state x="237" y="530" key="FileChooserDialogImpl" timestamp="1603565886419">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state x="158" y="353" key="FileChooserDialogImpl/62.0.1378.960@62.0.1378.960" timestamp="1603546411610" />
+    <state x="237" y="530" key="FileChooserDialogImpl/62.0.2498.1440@62.0.2498.1440" timestamp="1603565886419" />
+    <state x="164" y="353" key="FileChooserDialogImpl/68.0.1372.960@68.0.1372.960" timestamp="1602605185933" />
+    <state x="611" y="352" key="Github.ShareDialog" timestamp="1602182789660">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state x="611" y="352" key="Github.ShareDialog/68.0.1372.960@68.0.1372.960" timestamp="1602182789660" />
+    <state x="515" y="118" key="Github.UntrackedFilesDialog" timestamp="1602182797967">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state x="515" y="118" key="Github.UntrackedFilesDialog/68.0.1372.960@68.0.1372.960" timestamp="1602182797967" />
+    <state width="2499" height="508" key="GridCell.Tab.0.bottom" timestamp="1603717005723">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state width="1335" height="316" key="GridCell.Tab.0.bottom/62.0.1378.960@62.0.1378.960" timestamp="1603547803348" />
+    <state width="2499" height="508" key="GridCell.Tab.0.bottom/62.0.2498.1440@62.0.2498.1440" timestamp="1603717005723" />
+    <state width="1329" height="315" key="GridCell.Tab.0.bottom/68.0.1372.960@68.0.1372.960" timestamp="1603129698037" />
+    <state width="2499" height="508" key="GridCell.Tab.0.center" timestamp="1603717005723">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state width="1335" height="316" key="GridCell.Tab.0.center/62.0.1378.960@62.0.1378.960" timestamp="1603547803348" />
+    <state width="2499" height="508" key="GridCell.Tab.0.center/62.0.2498.1440@62.0.2498.1440" timestamp="1603717005723" />
+    <state width="1329" height="315" key="GridCell.Tab.0.center/68.0.1372.960@68.0.1372.960" timestamp="1603129698037" />
+    <state width="2499" height="508" key="GridCell.Tab.0.left" timestamp="1603717005723">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state width="1335" height="316" key="GridCell.Tab.0.left/62.0.1378.960@62.0.1378.960" timestamp="1603547803348" />
+    <state width="2499" height="508" key="GridCell.Tab.0.left/62.0.2498.1440@62.0.2498.1440" timestamp="1603717005723" />
+    <state width="1329" height="315" key="GridCell.Tab.0.left/68.0.1372.960@68.0.1372.960" timestamp="1603129698037" />
+    <state width="2499" height="508" key="GridCell.Tab.0.right" timestamp="1603717005723">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state width="1335" height="316" key="GridCell.Tab.0.right/62.0.1378.960@62.0.1378.960" timestamp="1603547803348" />
+    <state width="2499" height="508" key="GridCell.Tab.0.right/62.0.2498.1440@62.0.2498.1440" timestamp="1603717005723" />
+    <state width="1329" height="315" key="GridCell.Tab.0.right/68.0.1372.960@68.0.1372.960" timestamp="1603129698037" />
+    <state width="2499" height="508" key="GridCell.Tab.1.bottom" timestamp="1603717005723">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state width="1335" height="316" key="GridCell.Tab.1.bottom/62.0.1378.960@62.0.1378.960" timestamp="1603547803348" />
+    <state width="2499" height="508" key="GridCell.Tab.1.bottom/62.0.2498.1440@62.0.2498.1440" timestamp="1603717005723" />
+    <state width="1329" height="315" key="GridCell.Tab.1.bottom/68.0.1372.960@68.0.1372.960" timestamp="1603129698037" />
+    <state width="2499" height="508" key="GridCell.Tab.1.center" timestamp="1603717005723">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state width="1335" height="316" key="GridCell.Tab.1.center/62.0.1378.960@62.0.1378.960" timestamp="1603547803348" />
+    <state width="2499" height="508" key="GridCell.Tab.1.center/62.0.2498.1440@62.0.2498.1440" timestamp="1603717005723" />
+    <state width="1329" height="315" key="GridCell.Tab.1.center/68.0.1372.960@68.0.1372.960" timestamp="1603129698037" />
+    <state width="2499" height="508" key="GridCell.Tab.1.left" timestamp="1603717005723">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state width="1335" height="316" key="GridCell.Tab.1.left/62.0.1378.960@62.0.1378.960" timestamp="1603547803348" />
+    <state width="2499" height="508" key="GridCell.Tab.1.left/62.0.2498.1440@62.0.2498.1440" timestamp="1603717005723" />
+    <state width="1329" height="315" key="GridCell.Tab.1.left/68.0.1372.960@68.0.1372.960" timestamp="1603129698037" />
+    <state width="2499" height="508" key="GridCell.Tab.1.right" timestamp="1603717005723">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state width="1335" height="316" key="GridCell.Tab.1.right/62.0.1378.960@62.0.1378.960" timestamp="1603547803348" />
+    <state width="2499" height="508" key="GridCell.Tab.1.right/62.0.2498.1440@62.0.2498.1440" timestamp="1603717005723" />
+    <state width="1329" height="315" key="GridCell.Tab.1.right/68.0.1372.960@68.0.1372.960" timestamp="1603129698037" />
+    <state x="394" y="242" key="MultipleFileMergeDialog" timestamp="1602605281679">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state x="394" y="242" key="MultipleFileMergeDialog/68.0.1372.960@68.0.1372.960" timestamp="1602605281679" />
+    <state x="563" y="183" key="RollbackChangesDialog" timestamp="1602601595783">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state x="563" y="183" key="RollbackChangesDialog/68.0.1372.960@68.0.1372.960" timestamp="1602601595783" />
+    <state x="128" y="117" key="SettingsEditor" timestamp="1603737670915">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="128" y="117" key="SettingsEditor/0.0.2560.1440/2622.80.1858.1200@0.0.2560.1440" timestamp="1603737670915" />
+    <state x="131" y="78" key="SettingsEditor/62.0.1378.960@62.0.1378.960" timestamp="1603546834117" />
+    <state x="187" y="368" key="SettingsEditor/62.0.2498.1440@62.0.2498.1440" timestamp="1602167897594" />
+    <state x="137" y="78" key="SettingsEditor/68.0.1372.960@68.0.1372.960" timestamp="1602962931196" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1597875568657">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/68.0.1372.960@68.0.1372.960" timestamp="1597875568657" />
+    <state x="347" y="213" key="Vcs.Push.Dialog.v2" timestamp="1602605517894">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state x="347" y="213" key="Vcs.Push.Dialog.v2/68.0.1372.960@68.0.1372.960" timestamp="1602605517894" />
+    <state x="523" y="214" key="VcsDiffUtil.ChangesDialog" timestamp="1602510509266">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state x="523" y="214" key="VcsDiffUtil.ChangesDialog/68.0.1372.960@68.0.1372.960" timestamp="1602510509266" />
+    <state x="572" y="394" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602335854757">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state x="572" y="394" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/68.0.1372.960@68.0.1372.960" timestamp="1602335854757" />
+    <state x="161" y="93" width="1187" height="775" key="dock-window-1" timestamp="1602602739913">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state x="161" y="93" width="1187" height="775" key="dock-window-1/68.0.1372.960@68.0.1372.960" timestamp="1602602739913" />
+    <state x="734" y="0" width="1284" height="1440" key="find.popup" timestamp="1603749502818">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="734" y="0" width="1284" height="1440" key="find.popup/0.0.2560.1440/2622.80.1858.1200@0.0.2560.1440" timestamp="1603749502818" />
+    <state x="457" y="0" width="691" height="960" key="find.popup/62.0.1378.960@62.0.1378.960" timestamp="1603552221911" />
+    <state x="778" y="0" width="1251" height="1440" key="find.popup/62.0.2498.1440@62.0.2498.1440" timestamp="1603478842928" />
+    <state x="461" y="0" width="687" height="960" key="find.popup/68.0.1372.960@68.0.1372.960" timestamp="1602611371605" />
+    <state width="750" height="535" key="javadoc.popup" timestamp="1598747184880">
+      <screen x="68" y="0" width="1372" height="960" />
+    </state>
+    <state width="750" height="535" key="javadoc.popup/68.0.1372.960@68.0.1372.960" timestamp="1598747184880" />
+    <state x="918" y="345" key="refactoring.ChangeSignatureDialog" timestamp="1603746325839">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="918" y="345" key="refactoring.ChangeSignatureDialog/0.0.2560.1440/2622.80.1858.1200@0.0.2560.1440" timestamp="1603746325839" />
+    <state x="958" y="345" key="refactoring.ChangeSignatureDialog/62.0.2498.1440@62.0.2498.1440" timestamp="1602254880070" />
+    <state x="560" y="230" key="refactoring.ChangeSignatureDialog/68.0.1372.960@68.0.1372.960" timestamp="1602785379129" />
+    <state x="650" y="308" width="1570" height="1017" key="search.everywhere.popup" timestamp="1603749811192">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="650" y="308" width="1570" height="1017" key="search.everywhere.popup/0.0.2560.1440/2622.80.1858.1200@0.0.2560.1440" timestamp="1603749811192" />
+    <state x="412" y="205" width="845" height="678" key="search.everywhere.popup/62.0.1378.960@62.0.1378.960" timestamp="1603550968278" />
+    <state x="697" y="308" width="1530" height="1017" key="search.everywhere.popup/62.0.2498.1440@62.0.2498.1440" timestamp="1603480202600" />
+    <state x="417" y="205" width="840" height="678" key="search.everywhere.popup/68.0.1372.960@68.0.1372.960" timestamp="1603130298326" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ormy/__init__.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ormy/query_engine.py</url>
+          <line>89</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="tests">
+        <watch expression="top.operand_count()" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_ops_TestListResultOpNode_test_gt.coverage" NAME="pytest for test_ops.TestListResultOpNode.test_gt Coverage Results" MODIFIED="1598743281770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_csv_database_TestCsvDatabase_test_load_model.coverage" NAME="pytest for test_csv_database.TestCsvDatabase.test_load_model Coverage Results" MODIFIED="1598056067188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_column_TestIntegerColumnType_test_compatible_type.coverage" NAME="pytest for test_column.TestIntegerColumnType.test_compatible_type Coverage Results" MODIFIED="1596648114668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_in_test_column_py.coverage" NAME="pytest in test_column.py Coverage Results" MODIFIED="1597504456155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_ops_TestOpNode.coverage" NAME="pytest for test_ops.TestOpNode Coverage Results" MODIFIED="1598574242137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_model_TestModel_test_has_field.coverage" NAME="pytest for test_model.TestModel.test_has_field Coverage Results" MODIFIED="1598488256690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_column_TestColumn_test_compatible_type.coverage" NAME="pytest for test_column.TestColumn.test_compatible_type Coverage Results" MODIFIED="1596648118434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_datatabase_TestDatabase_test_query_empty.coverage" NAME="pytest for test_datatabase.TestDatabase.test_query_empty Coverage Results" MODIFIED="1603311102857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_model_TestModel.coverage" NAME="pytest for test_model.TestModel Coverage Results" MODIFIED="1598488632111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_ops_TestQueryOp_test_where.coverage" NAME="pytest for test_ops.TestQueryOp.test_where Coverage Results" MODIFIED="1602170042115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_csv_database_TestCsvDatabase_test_validate_path_path_dne.coverage" NAME="pytest for test_csv_database.TestCsvDatabase.test_validate_path_path_dne Coverage Results" MODIFIED="1597689166823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_model_TestModel_test_has_tag.coverage" NAME="pytest for test_model.TestModel.test_has_tag Coverage Results" MODIFIED="1598397536132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_column_TestColumn.coverage" NAME="pytest for test_column.TestColumn Coverage Results" MODIFIED="1597497798519" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_ops_TestQueryOp_test_init.coverage" NAME="pytest for test_ops.TestQueryOp.test_init Coverage Results" MODIFIED="1602168441452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_ops_TestListResultOpNode_test_eq.coverage" NAME="pytest for test_ops.TestListResultOpNode.test_eq Coverage Results" MODIFIED="1598742676708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_ops_TestListResultOpNode_test_lte.coverage" NAME="pytest for test_ops.TestListResultOpNode.test_lte Coverage Results" MODIFIED="1598743000322" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_ops_TestListResultOpNode_test_lt.coverage" NAME="pytest for test_ops.TestListResultOpNode.test_lt Coverage Results" MODIFIED="1598742952072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_query_engine_TestQueryEngine.coverage" NAME="pytest for test_query_engine.TestQueryEngine Coverage Results" MODIFIED="1603547330620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_column_TestFloatColumnType_test_cast.coverage" NAME="pytest for test_column.TestFloatColumnType.test_cast Coverage Results" MODIFIED="1596724723618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$Unittests_for_test_column_TestIntegerColumnType_test_cast.coverage" NAME="Unittests for test_column.TestIntegerColumnType.test_cast Coverage Results" MODIFIED="1596648076070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$test.coverage" NAME="test Coverage Results" MODIFIED="1603223935101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_ops_TestQueryOp.coverage" NAME="pytest for test_ops.TestQueryOp Coverage Results" MODIFIED="1602170252461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_column_TestFloatColumnType.coverage" NAME="pytest for test_column.TestFloatColumnType Coverage Results" MODIFIED="1596724488080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_ops_TestQueryOp_test_where_tag.coverage" NAME="pytest for test_ops.TestQueryOp.test_where_tag Coverage Results" MODIFIED="1602170385810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_csv_database_TestCsvDatabase_test_convert_row_to_class_instance.coverage" NAME="pytest for test_csv_database.TestCsvDatabase.test_convert_row_to_class_instance Coverage Results" MODIFIED="1597686046215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_in_tests.coverage" NAME="pytest in tests Coverage Results" MODIFIED="1603284520507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_ops_TestOpNode_test_find_columns.coverage" NAME="pytest for test_ops.TestOpNode.test_find_columns Coverage Results" MODIFIED="1598748752513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_ops_TestOpNode_test_find_in_parents.coverage" NAME="pytest for test_ops.TestOpNode.test_find_in_parents Coverage Results" MODIFIED="1598574269077" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_query_engine_TestQueryEngine_test_convert_query_to_expr_tree_simple_filter.coverage" NAME="pytest for test_query_engine.TestQueryEngine.test_convert_query_to_expr_tree_simple_filter Coverage Results" MODIFIED="1603565991332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_column_TestFloatColumnType_test_compatible_type.coverage" NAME="pytest for test_column.TestFloatColumnType.test_compatible_type Coverage Results" MODIFIED="1596724499861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_datatabase_test_query.coverage" NAME="pytest for test_datatabase.test_query Coverage Results" MODIFIED="1598058097719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_ops_TestComparisonOp_test_find_where_field.coverage" NAME="pytest for test_ops.TestComparisonOp.test_find_where_field Coverage Results" MODIFIED="1598747674803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_ops_TestListResultOpNode.coverage" NAME="pytest for test_ops.TestListResultOpNode Coverage Results" MODIFIED="1598741797384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_ops_TestComparisonOp_test_eval.coverage" NAME="pytest for test_ops.TestComparisonOp.test_eval Coverage Results" MODIFIED="1602015531094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_ops_TestListResultOpNode_test_gte.coverage" NAME="pytest for test_ops.TestListResultOpNode.test_gte Coverage Results" MODIFIED="1598743323081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_query_engine_TestQueryEngine_test_convert_query_to_expr_tree_no_ops.coverage" NAME="pytest for test_query_engine.TestQueryEngine.test_convert_query_to_expr_tree_no_ops Coverage Results" MODIFIED="1603488089978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_ops_TestWhereOp_test_multiple_where_op.coverage" NAME="pytest for test_ops.TestWhereOp.test_multiple_where_op Coverage Results" MODIFIED="1602019060253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$Unittests_for_test_column_TestColumn.coverage" NAME="Unittests for test_column.TestColumn Coverage Results" MODIFIED="1596645027151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_column_TestDateColumnType_test_cast.coverage" NAME="pytest for test_column.TestDateColumnType.test_cast Coverage Results" MODIFIED="1596725271746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_csv_database_TestCsvDatabase_test_load_model2.coverage" NAME="pytest for test_csv_database.TestCsvDatabase.test_load_model2 Coverage Results" MODIFIED="1598051725467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$Unittests_for_test_column_TestIntegerColumnType.coverage" NAME="Unittests for test_column.TestIntegerColumnType Coverage Results" MODIFIED="1596724451109" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_ops_TestWhereOp.coverage" NAME="pytest for test_ops.TestWhereOp Coverage Results" MODIFIED="1602076869496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/ormy$pytest_for_test_query_engine_TestEricCraig_test_eric_craig.coverage" NAME="pytest for test_query_engine.TestEricCraig.test_eric_craig Coverage Results" MODIFIED="1603564105956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+  </component>
+</project>
