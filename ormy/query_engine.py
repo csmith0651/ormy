@@ -266,11 +266,9 @@ class QueryEngine(ABC):
                 if len(and_stack) < top.operand_count():
                     raise QueryEngineException('for operator "%s" insufficient operands (need %d only %d on stack)'
                                                % (top.__name__, top.operand_count(), len(and_stack)))
-                # todo: is there a builtin operation to pop off the last N elements?
-                children = []
-                for i in range(0, top.operand_count()):
-                    children.append(and_stack.pop())
-                Expr.attach_operands(top, children)
+                last_n = -1*top.operand_count()
+                Expr.attach_operands(top, and_stack[last_n:])
+                del and_stack[last_n:]
                 and_stack.append(top)
             elif cur_expr.is_operand():
                 and_stack.append(cur_expr)
@@ -285,11 +283,9 @@ class QueryEngine(ABC):
                 if len(and_stack) < top.operand_count():
                     raise QueryEngineException('for operator "%s" insufficient operands (need %d only %d on stack)'
                                                % (top.__name__, top.operand_count(), len(and_stack)))
-                # todo: is there a builtin operation to pop off the last N elements?
-                children = []
-                for i in range(0, top.operand_count()):
-                    children.append(and_stack.pop())
-                Expr.attach_operands(top, children)
+                last_n = -1*top.operand_count()
+                Expr.attach_operands(top, and_stack[last_n:])
+                del and_stack[last_n:]
                 and_stack.append(top)
             else:
                 raise QueryEngineException("expr to AST unknown state")
