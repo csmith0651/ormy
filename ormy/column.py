@@ -1,21 +1,21 @@
-from abc import abstractmethod
+from abc import abstractmethod, ABC
 from datetime import datetime
 
 
 class Column(object):
-    def __init__(self, field, column_type, file_column_name='', primary_key=False, tags=[]):
+    def __init__(self, field, column_type, file_column_name='', primary_key=False, tags=None):
         file_column_name = field if file_column_name == '' else file_column_name
         self.field = field
         self.column_type = column_type
         self.file_column_name = file_column_name  # the name of the column in the data source
-        self.tags = tags
+        self.tags = [] if tags is None else tags
         self.primary_key = primary_key
 
     def compatible_type(self, value):
         return self.column_type.compatible_type(value)
 
 
-class ColumnType(object):
+class ColumnType(ABC):
     def __init__(self):
         pass
 
@@ -31,7 +31,7 @@ class ColumnType(object):
 # todo: could save memory by creating singletons for each of the column types.
 class IntegerColumnType(ColumnType):
     def __init__(self):
-        pass
+        super().__init__()
 
     def compatible_type(self, value):
         return isinstance(value, int)
@@ -42,7 +42,7 @@ class IntegerColumnType(ColumnType):
 
 class FloatColumnType(ColumnType):
     def __init__(self):
-        pass
+        super().__init__()
 
     def compatible_type(self, value):
         return isinstance(value, float)
@@ -52,8 +52,9 @@ class FloatColumnType(ColumnType):
 
 
 class DateColumnType(ColumnType):
-    def __init__(self, format):
-        self.format = format
+    def __init__(self, date_format):
+        super().__init__()
+        self.format = date_format
 
     def compatible_type(self, value):
         return isinstance(value, datetime)
@@ -64,7 +65,7 @@ class DateColumnType(ColumnType):
 
 class StringColumnType(ColumnType):
     def __init__(self):
-        pass
+        super().__init__()
 
     def compatible_type(self, value):
         return isinstance(value, str)

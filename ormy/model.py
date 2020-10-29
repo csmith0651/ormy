@@ -4,6 +4,8 @@
 #   - Ensure that columns field is populated
 
 class Model(object):
+    columns = None
+
     def __init__(self):
         pass
 
