@@ -48,6 +48,7 @@ class FieldNode(CodeQueryBase):
         # TODO: check to see if the field is legal for this model to create a compile time-error rather than
         #   a query-time execution error.
         super().__init__(context)
+        FieldNode.validate_field_name_in_model(context, field)
         self.field = field
 
     def eq(self):
@@ -64,6 +65,15 @@ class FieldNode(CodeQueryBase):
 
     def __str__(self):
         return "field('%s')" % self.field
+
+    @classmethod
+    def validate_field_name_in_model(cls, context, field):
+        assert isinstance(context.query, QueryNode)
+        model = context.query.model
+        if not model.has_field(field):
+            raise DatabaseException(f"field '{field}' does not exist in model '{model.__name__}'")
+
+
 
 # TODO: Add support for AndNode and OrNode to support complex boolean queries.
 
