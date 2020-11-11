@@ -42,11 +42,10 @@ class QueryNode(CodeQueryBase):
     def __str__(self):
         return "query(model='%s')" % self.model.__name__
 
+
 # noinspection PyPep8Naming
 class FieldNode(CodeQueryBase):
     def __init__(self, field, context):
-        # TODO: check to see if the field is legal for this model to create a compile time-error rather than
-        #   a query-time execution error.
         super().__init__(context)
         FieldNode.validate_field_name_in_model(context, field)
         self.field = field
@@ -72,10 +71,6 @@ class FieldNode(CodeQueryBase):
         model = context.query.model
         if not model.has_field(field):
             raise DatabaseException(f"field '{field}' does not exist in model '{model.__name__}'")
-
-
-
-# TODO: Add support for AndNode and OrNode to support complex boolean queries.
 
 
 class ConjunctionNode(CodeQueryBase):
@@ -109,6 +104,7 @@ class AndNode(ConjunctionNode):
 
     def __str__(self):
         return "AND()"
+
 
 class CompNode(CodeQueryBase):
     def __init__(self, context):

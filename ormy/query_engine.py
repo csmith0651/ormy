@@ -1,6 +1,11 @@
 from abc import abstractmethod, ABC
 
 
+class QueryEngineException(Exception):
+    def __init__(self, message):
+        self.message = message
+
+
 class Expr(ABC):
     def __init__(self):
         self.left = None
@@ -74,8 +79,8 @@ class OperandExpr(Expr):
 
 class ValueExpr(OperandExpr):
     def __init__(self, value):
-        self.value = value
         super().__init__()
+        self.value = value
 
     def __str__(self):
         return "value(%s)" % self.value
@@ -161,11 +166,26 @@ class FieldExpr(OperandExpr):
         return super().__eq__(other) and self.field == other.field
 
 
+class LambdaExpr(OperandExpr):
+    """Not intended to use in the query, but useful for internal operations. Inject an arbitrary
+       lambda function into the AST for delay evaluation."""
+    def __init__(self, func, expr):
+        super().__init__()
+        self.func = func
+        self.left = expr
+
+    def __str__(self):
+        return "lambda()"
+
+    def __eq__(self, other):
+        return super().__eq__(other) and self.func == other.func
+
+
 class QueryExpr(OperatorExpr):
     def __init__(self, model):
+        super().__init__()
         self.model = model
         self.left = None
-        super().__init__()
 
     def precedence(self):
         return 2
@@ -189,7 +209,6 @@ class QueryContext(object):
         return "QueryContext(%s, %s)" % (self.database, self.query.full_str())
 
     def eval_query(self):
-        print('executing query: context = %s' % self)
         return self.database.eval(self.query)
 
 
@@ -304,8 +323,3 @@ class QueryEngine(ABC):
     def generate_query_all_expr(cls, expr) -> Expr:
         Expr.attach_operands(expr, [QueryEngine._TRUE])
         return expr
-
-
-class QueryEngineException(Exception):
-    def __init__(self, message):
-        self.message = message

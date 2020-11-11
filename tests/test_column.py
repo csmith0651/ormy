@@ -9,19 +9,19 @@ test_date = datetime.now()
 class TestColumn:
     def test_compatible_type(self):
         col = Column('f1', IntegerColumnType())
-        assert col.compatible_type(100) == True
-        assert col.compatible_type(100.0) == False
-        assert col.compatible_type('string') == False
-        assert col.compatible_type(test_date) == False
+        assert col.compatible_type(100)
+        assert not col.compatible_type(100.0)
+        assert not col.compatible_type('string')
+        assert not col.compatible_type(test_date)
 
 
 class TestIntegerColumnType:
     def test_compatible_type(self):
         col = IntegerColumnType()
-        assert col.compatible_type(100) == True
-        assert col.compatible_type(100.0) == False
-        assert col.compatible_type('string') == False
-        assert col.compatible_type(test_date) == False
+        assert col.compatible_type(100)
+        assert not col.compatible_type(100.0)
+        assert not col.compatible_type('string')
+        assert not col.compatible_type(test_date)
 
     def test_cast(self):
         col = IntegerColumnType()
@@ -34,11 +34,11 @@ class TestIntegerColumnType:
 class TestFloatColumnType:
     def test_compatible_type(self):
         col = FloatColumnType()
-        assert col.compatible_type(100.5) == True
-        assert col.compatible_type(100.0) == True
-        assert col.compatible_type(100) == False
-        assert col.compatible_type('string') == False
-        assert col.compatible_type(test_date) == False
+        assert col.compatible_type(100.5)
+        assert col.compatible_type(100.0)
+        assert not col.compatible_type(100)
+        assert not col.compatible_type('string')
+        assert not col.compatible_type(test_date)
 
     def test_cast(self):
         col = FloatColumnType()
@@ -53,11 +53,11 @@ class TestDateColumnType:
 
     def test_compatible_type(self):
         col = DateColumnType(TestDateColumnType.DATE_FORMAT)
-        assert col.compatible_type(100.5) == False
-        assert col.compatible_type(100.0) == False
-        assert col.compatible_type(100) == False
-        assert col.compatible_type('string') == False
-        assert col.compatible_type(test_date) == True
+        assert not col.compatible_type(100.5)
+        assert not col.compatible_type(100.0)
+        assert not col.compatible_type(100)
+        assert not col.compatible_type('string')
+        assert col.compatible_type(test_date)
 
     def test_cast(self):
         col = DateColumnType(TestDateColumnType.DATE_FORMAT)
@@ -71,11 +71,11 @@ class TestDateColumnType:
 class TestStringColumnType:
     def test_compatible_type(self):
         col = StringColumnType()
-        assert col.compatible_type(100) == False
-        assert col.compatible_type(100.5) == False
-        assert col.compatible_type('foobar') == True
-        assert col.compatible_type(test_date) == False
+        assert not col.compatible_type(100)
+        assert not col.compatible_type(100.5)
+        assert col.compatible_type('foobar')
+        assert not col.compatible_type(test_date)
 
     def test_cast_self(self):
         # I don't think there's a column type you can't cast to string..
-        assert True == True
+        assert True
