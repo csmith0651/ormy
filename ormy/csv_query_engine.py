@@ -132,5 +132,6 @@ class CsvQueryEngine(QueryEngine):
         for patch in entities_to_patch:
             setattr(patch, fk_object_field, cache[getattr(patch, fk_field)])
 
-        for c in fk_model.get_fk_columns():
-            self.load_fk_entities_work(c, new_entities, entity_cache)
+        if len(new_entities) > 0:
+            for c in fk_model.get_fk_columns():
+                self.load_fk_entities_work(c, new_entities, entity_cache)

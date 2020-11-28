@@ -143,8 +143,6 @@ class TestCsvDatabase:
         assert data[0].level3 is data[1].level3
 
     def test_multiple_fk_three_deep(self, tmpdir):
-        # create structure of one FK at level one, one FK at level two, and two FKs are level 3.
-        # TODO: complete
         f1 = tmpdir.join(ModelLevel1.__csv_file__)
         f1.write("""id,value,level2_id
 1,100,2
@@ -199,3 +197,26 @@ class TestCsvDatabase:
         # check that the level3 reference is to the same object thereby confirming the object was not reloaded but
         # instead pulled from the cache.
         assert l1.level2.level3 is l2.level2.level3
+
+    def test_hierarchical_models(self, tmpdir):
+        f1 = tmpdir.join(Person.__csv_file__)
+        f1.write("""id,last_name,first_name,parent_id
+1,Smith,Craig,2
+2,Smith,Elizabeth,3
+3,Harris,Joesph,3
+""")
+        db = CsvDatabase(tmpdir)
+        people = db.query(Person).field('id').eq().value(1).exec()
+        grand_father = Person()
+        grand_father.id = 3
+        grand_father.last_name = 'Harris'
+        grand_father.first_name = 'Joesph'
+        grand_father.parent_id = 3
+        grand_father.parent = grand_father
+        assert Model.compare(people[0],
+                             Person.create({'id': 1, 'last_name': 'Smith', 'first_name': 'Craig',
+                                            'parent_id': 2,
+                                            'parent': Person.create(
+                                                {'id': 2, 'last_name': 'Smith', 'first_name': 'Elizabeth',
+                                                 'parent_id': grand_father.id,
+                                                 'parent': grand_father})}))
