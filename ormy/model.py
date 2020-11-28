@@ -75,6 +75,8 @@ class Model(object):
 
     @classmethod
     def compare(cls, ent1, ent2):
+        if ent1 is ent2:
+            return True
         if not isinstance(ent1, Model):
             return False
         if type(ent1) != type(ent2):
@@ -82,12 +84,16 @@ class Model(object):
         for c in type(ent1).columns:
             if c.has_field(ent1) != c.has_field(ent2):
                 return False
+            # FK's must be checked before regular fields
+            if c.has_fk():
+                #  NOTE: What does it mean to have FKs not equal? Does that mean immediately that the two
+                #  objects are not equal? FKs must point to a unique row in the foreign table. But are we comparing
+                #  the rows or the content of the row for comparison?
+                #  ANSWER: FKs being different immediately returns False for the comparison because the FK is
+                #    referencing a different row. Even if all the other values are the same, the row (therefore
+                #    the entity) is a different instance.
+                return c.get_field(ent1) == c.get_field(ent2)
             if c.get_field(ent1) != c.get_field(ent2):
                 return False
-            if c.has_fk():
-                fk_ent1 = getattr(ent1, c.object_field)
-                fk_ent2 = getattr(ent2, c.object_field)
-                if not cls.compare(fk_ent1, fk_ent2):
-                    return False
 
         return True

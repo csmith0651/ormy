@@ -170,5 +170,8 @@ class TestModel:
 
         assert Model.compare(l1, l2)
 
-        l1.level2.level3.value = 1
+        l2.level2_id = 4
+        l2.level2.id = 4
+        l2.level2.level3_id = 5
+        l2.level2.level3.id = 5
         assert not Model.compare(l1, l2)

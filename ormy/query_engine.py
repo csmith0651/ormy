@@ -12,7 +12,7 @@ class Expr(ABC):
         self.right = None
 
     def __eq__(self, other) -> bool:
-        return isinstance(other, type(self))
+        return self is other or isinstance(other, type(self))
 
     def children(self, left, right=None):
         self.left = left
