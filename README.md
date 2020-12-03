@@ -13,48 +13,29 @@ I've seen ORM systems but in general trusted their internal mechanisms. While I 
 * CsvDatabase(path) - create a CSV backed ORM where each model class is annotated with additional information to locate the proper CSV file.
 
 ## Database methods
-* query(Model) - returns a QueryOp instance. 
+* query(Model) - returns a QueryOp instance.
+* eval(query) - method to pass the query to the internal database engine.
+* compile(query) - method to compile the query in the database engine. Returns the nodes converted to expression nodes in
+  an AST.
 
-## OpNode methods
+## Query Operations
 
 Abstract class for all operations to perform on a query result.
 
 * exec() - evaluate the entire query starting at current operation.
-* eval() - a virtual method that defines the meaning of exec(). Different
-  per node.
-  
-## ListOpResultsNode
-
-Operations that can be performed on a list of results
-
-* eq(value)
-* lt(value)
-* gt(value)
-* lte(value)
-* gte(value)
-
-## QueryOp
-* eval() - evaluate the query on the model specified for the query
-* field(field) - select a field within the model to perform a comparison operation on. This returns a FieldOp.
-  A field clause must be paired with a comparsion operator.
-* field_tag(tag) - select a collection of fields, by tag, to perform a comparison operation on.
-  This returns a FieldTagOp. A field_tag clause must be paired with a comparsion operator.
-* limit(int) -- limit the number of results.
-
-
-## Example usages
-
-Generate data results.
-
-* db.query(Model).exec()
-* db.query(Model).field(value).exec()
-* db.query(Model).field(value).COMP(value).exec()
-* (DNE) db.query(Model).limit(int).exec()
-* (DNE) db.query(Model).join(Model).oneq(f1,f2).exec()
-
-Operations that generate a list result:
-db.query()
-db.COMP()
+* field(str) - select a field from a loaded instance of the model selected by the query method on the database. See
+  `eq()` example below.
+* value(constant) - a constant to compare against. See `eq()` example below.
+* eq() - given a field operation prior compare to a value operation after and evaluate to true if equal. Note, currently
+  other comparison operations are not implemented. Left as an exercise for the reader. e.g.
+  `db.query(Model).field('id').eq().value(100).exec()`
+* flambda - field lambda. Given a field operation prior passes that extracted field to the function (or lambda) specified
+  as the parameter. Useful for operations that are too complicated to express using the limited operations available
+  in the query methods. e.g. `db.query(Model).field('id').flambda(lambda id: id == 100).exec()`
+* rlambda - record lambda. Pass a instance of the model, during loading, to the function specified as a parameter. e.g.
+  `db.query(Model).rlambda(lambda rec: rec.id == 100).exec()`
+* AND(), OR() - boolean operators joining to expressions together. e.g.
+  `db.query(Model).field('id').eq().value(100).OR().field('name').eq().value('Craig').exec()`
 
 ## Notes
 
