@@ -4,7 +4,7 @@ from ormy.column import *
 from ormy.csv_database import CsvDatabase
 from ormy.datatabase_exception import DatabaseException
 from ormy.model import Model
-from tests.models_for_testing import Person, Product, Order, generate_order_data, Manufacturer, AllValueTypes, \
+from tests.models_for_testing import Person, AllValueTypes, \
     ModelLevel2, ModelLevel3, ModelLevel1
 
 

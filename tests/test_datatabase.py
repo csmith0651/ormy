@@ -1,8 +1,6 @@
 import pytest
 
-from ormy.column import *
 from ormy.datatabase import *
-from ormy.model import Model
 from ormy.query_engine import *
 from tests.models_for_testing import AllValueTypes
 
@@ -36,10 +34,9 @@ class TestDatabase:
         assert expr_tree == QueryExpr(AllValueTypes).children(EqExpr().children(FieldExpr('int_col'), ValueExpr(100)))
 
     def test_convert_query_and(self):
-        expr_tree = Database().query(AllValueTypes).field('int_col').eq().value(100).AND().field('string_col').eq().value(
-            200).compile()
-        assert expr_tree == QueryExpr(AllValueTypes).children(AndExpr()
-                                                          .children(
+        expr_tree = Database().query(AllValueTypes).field('int_col').eq().value(100).AND().field('string_col')\
+            .eq().value(200).compile()
+        assert expr_tree == QueryExpr(AllValueTypes).children(AndExpr().children(
             EqExpr().children(FieldExpr('int_col'), ValueExpr(100)),
             EqExpr().children(FieldExpr('string_col'), ValueExpr(200))))
 

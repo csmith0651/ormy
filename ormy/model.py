@@ -84,7 +84,7 @@ class Model(object):
         for c in type(ent1).columns:
             if c.has_field(ent1) != c.has_field(ent2):
                 return False
-            # FK's must be checked before regular fields
+            # FKs must be checked before regular fields
             if c.has_fk():
                 #  NOTE: What does it mean to have FKs not equal? Does that mean immediately that the two
                 #  objects are not equal? FKs must point to a unique row in the foreign table. But are we comparing

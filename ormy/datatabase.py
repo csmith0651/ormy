@@ -56,10 +56,12 @@ class FieldLambdaNode(CodeQueryBase):
         super().__init__(context)
         self.func = func
 
+    # noinspection PyPep8Naming
     def AND(self):
         self.child = AndNode(self.context)
         return self.child
 
+    # noinspection PyPep8Naming
     def OR(self):
         self.child = OrNode(self.context)
         return self.child
