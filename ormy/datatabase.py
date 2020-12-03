@@ -36,11 +36,51 @@ class QueryNode(CodeQueryBase):
         self.child = FieldNode(field, self.context)
         return self.child
 
+    def flambda(self, func):
+        self.child = FieldLambdaNode(func, self.context)
+        return self.child
+
+    def rlambda(self, func):
+        self.child = RecordLambdaNode(func, self.context)
+        return self.child
+
     def exec(self):
         return self.context.eval_query()
 
     def __str__(self):
         return "query(model='%s')" % self.model.__name__
+
+
+class FieldLambdaNode(CodeQueryBase):
+    def __init__(self, func, context):
+        super().__init__(context)
+        self.func = func
+
+    def AND(self):
+        self.child = AndNode(self.context)
+        return self.child
+
+    def OR(self):
+        self.child = OrNode(self.context)
+        return self.child
+
+    def exec(self):
+        return self.context.eval_query()
+
+    def __str__(self):
+        return "flambda(%s)" % self.func
+
+
+class RecordLambdaNode(CodeQueryBase):
+    def __init__(self, func, context):
+        super().__init__(context)
+        self.func = func
+
+    def exec(self):
+        return self.context.eval_query()
+
+    def __str__(self):
+        return 'rlambda(%s)' % self.func
 
 
 # noinspection PyPep8Naming
@@ -60,6 +100,10 @@ class FieldNode(CodeQueryBase):
 
     def OR(self):
         self.child = OrNode(self.context)
+        return self.child
+
+    def flambda(self, func):
+        self.child = FieldLambdaNode(func, self.context)
         return self.child
 
     def __str__(self):
@@ -87,6 +131,10 @@ class ConjunctionNode(CodeQueryBase):
 
     def field(self, field):
         self.child = FieldNode(field, self.context)
+        return self.child
+
+    def rlambda(self, func):
+        self.child = RecordLambdaNode(func, self.context)
         return self.child
 
 
@@ -180,6 +228,10 @@ class Database(ABC):
                 ret.append(AndExpr())
             elif isinstance(query, OrNode):
                 ret.append(OrExpr())
+            elif isinstance(query, FieldLambdaNode):
+                ret.append(FieldLambdaExpr(query.func))
+            elif isinstance(query, RecordLambdaNode):
+                ret.append(RecordLambdaExpr(query.func))
             else:
                 raise DatabaseException('unknown query object "%s"' % query.__name__)
 

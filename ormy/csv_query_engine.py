@@ -44,7 +44,11 @@ class CsvQueryEngine(QueryEngine):
             return expr.perform_compare(self._run(expr.left, context), self._run(expr.right, context))
         elif isinstance(expr, FieldExpr):
             return getattr(context.model_data, expr.field)
-        elif isinstance(expr, LambdaExpr):
+        elif isinstance(expr, WholeRecordExpr):
+            return context.model_data
+        elif isinstance(expr, FieldLambdaExpr):
+            return expr.func(self._run(expr.left, context))
+        elif isinstance(expr, RecordLambdaExpr):
             return expr.func(self._run(expr.left, context))
         elif isinstance(expr, ValueExpr):
             return expr.value
@@ -120,8 +124,8 @@ class CsvQueryEngine(QueryEngine):
         def filter_entities(val):
             return val in fk_ids and val not in cache
 
-        field_expr = FieldExpr(field_in_fk_model)
-        lambda_expr = LambdaExpr(filter_entities, field_expr)
+        lambda_expr = FieldLambdaExpr(filter_entities)
+        lambda_expr.left = FieldExpr(field_in_fk_model)
         new_entities = self.process_csv_file(fk_model, lambda_expr, ExprContext())
 
         # TODO: What if fk_field value (in the child) is None? Should that be allowed? Yes but should be

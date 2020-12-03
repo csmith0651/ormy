@@ -166,19 +166,55 @@ class FieldExpr(OperandExpr):
         return super().__eq__(other) and self.field == other.field
 
 
-class LambdaExpr(OperandExpr):
-    """Not intended to use in the query, but useful for internal operations. Inject an arbitrary
-       lambda function into the AST for delay evaluation."""
-    def __init__(self, func, expr):
+class FieldLambdaExpr(OperatorExpr):
+    def __init__(self, func):
         super().__init__()
         self.func = func
-        self.left = expr
+
+    def precedence(self):
+        return 15
+
+    def operand_count(self):
+        return 1
 
     def __str__(self):
-        return "lambda()"
+        return 'flambda(%s)' % self.func
 
     def __eq__(self, other):
-        return super().__eq__(other) and self.func == other.func
+        return super().__eq__(other) and self.func is other.func
+
+
+class WholeRecordExpr(OperandExpr):
+    """This extracts the record (i.e. the data entity) and pass is it to the parent.
+       There is no corresponding Node class."""
+
+    def __init__(self):
+        super().__init__()
+
+    def __str__(self):
+        return 'WholeRecordExpr()'
+
+    def __eq__(self, other):
+        return super().__eq__(other)
+
+
+class RecordLambdaExpr(OperatorExpr):
+    def __init__(self, func):
+        super().__init__()
+        self.func = func
+        self.left = WholeRecordExpr()
+
+    def precedence(self):
+        return 15
+
+    def operand_count(self):
+        return 0
+
+    def __str__(self):
+        return 'rlambda(%s)' % self.func
+
+    def __eq__(self, other):
+        return super().__eq__(other) and self.func is other.func
 
 
 class QueryExpr(OperatorExpr):
@@ -197,7 +233,7 @@ class QueryExpr(OperatorExpr):
         return super().__eq__(other) and (self.model == other.model) and (self.left == other.left)
 
     def __str__(self):
-        return "query( %s )" % self.model.__name__
+        return "query(model=%s,L=%s,R=%s)" % (self.model.__name__, self.left, self.right)
 
 
 class QueryContext(object):
@@ -285,9 +321,10 @@ class QueryEngine(ABC):
                 if len(and_stack) < top.operand_count():
                     raise QueryEngineException('for operator "%s" insufficient operands (need %d only %d on stack)'
                                                % (top.__name__, top.operand_count(), len(and_stack)))
-                last_n = -1*top.operand_count()
-                Expr.attach_operands(top, and_stack[last_n:])
-                del and_stack[last_n:]
+                last_n = -1 * top.operand_count()
+                if last_n < 0:
+                    Expr.attach_operands(top, and_stack[last_n:])
+                    del and_stack[last_n:]
                 and_stack.append(top)
             elif cur_expr.is_operand():
                 and_stack.append(cur_expr)
@@ -302,7 +339,7 @@ class QueryEngine(ABC):
                 if len(and_stack) < top.operand_count():
                     raise QueryEngineException('for operator "%s" insufficient operands (need %d only %d on stack)'
                                                % (top.__name__, top.operand_count(), len(and_stack)))
-                last_n = -1*top.operand_count()
+                last_n = -1 * top.operand_count()
                 Expr.attach_operands(top, and_stack[last_n:])
                 del and_stack[last_n:]
                 and_stack.append(top)
