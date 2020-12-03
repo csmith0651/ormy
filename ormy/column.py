@@ -1,5 +1,6 @@
 from abc import abstractmethod, ABC
 from datetime import datetime
+from typing import Type
 
 from ormy.model import Model
 
@@ -12,7 +13,7 @@ class PrimaryKey(object):
 class ForeignKey(object):
     # TODO: move field to the end of the param list and default to None. If not specified uses the same field name
     #   in the parent table.
-    def __init__(self, field: str, model: Model):
+    def __init__(self, field: str, model: Type[Model]):
         # TODO: lookup foreign_key_name in model and confirm exists
         #    Also validate, somewhere else probably, that type of FK and key in FK model match.
         # NOTE: the FK doesn't have to reference the PK of the other table!

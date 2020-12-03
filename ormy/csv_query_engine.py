@@ -19,7 +19,8 @@ class CsvQueryEngine(QueryEngine):
             k, v = item
             setattr(model_instance, k, v)
         assert len(model_instance.__dict__) == len(
-            model.columns), "the number attributes (%d) of instance does not match the number of columns (%d) in model '%s'" % (
+            model.columns),\
+            "the number attributes (%d) of instance does not match the number of columns (%d) in model '%s'" % (
             len(model_instance.__dict__), len(model.columns), model.__name__)
         return model_instance
 
