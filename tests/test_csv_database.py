@@ -108,6 +108,22 @@ class TestCsvDatabase:
         assert m1.int_col == 101 and m1.string_col == 'foobar2'
         assert m2.int_col == 102 and m2.string_col == 'foobar3'
 
+    def test_query_two_ands(self, tmpdir):
+        f1 = tmpdir.join(AllValueTypes.__csv_file__)
+        f1.write("""int_col,float_col,string_col,date_col
+100,1.00234,foobar1,2020-08-19 17:44:49.732176
+101,1.00234,foobar2,2020-08-19 17:44:49.732176
+102,1.00234,foobar3,2020-08-19 17:44:49.732176
+100,1.00234,foobar4,2020-08-19 17:44:49.732176
+""")
+        db = CsvDatabase(str(tmpdir))
+        data = db.query(AllValueTypes).field('int_col').flambda(lambda x: x == 100) \
+            .AND().rlambda(lambda rec: rec.string_col == 'foobar4') \
+            .AND().value(True).exec()
+        assert len(data) == 1
+        m = data[0]
+        assert m.int_col == 100 and m.string_col == 'foobar4'
+
     def test_multiple_fk_one_deep(self, tmpdir):
         db = CsvDatabase(str(tmpdir))
         f1 = tmpdir.join(ModelLevel2.__csv_file__)
