@@ -81,6 +81,16 @@ class RecordLambdaNode(CodeQueryBase):
     def exec(self):
         return self.context.eval_query()
 
+    # noinspection PyPep8Naming
+    def AND(self):
+        self.child = AndNode(self.context)
+        return self.child
+
+    # noinspection PyPep8Naming
+    def OR(self):
+        self.child = OrNode(self.context)
+        return self.child
+
     def __str__(self):
         return 'rlambda(%s)' % self.func
 

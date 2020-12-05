@@ -83,7 +83,7 @@ class CsvQueryEngine(QueryEngine):
         #   load in CQE which returns data to QE which scans for foreign keys in QE since this is a platform-independent
         #   action. The FK scan traverses the schema doing loads using load from QE and CEQ recursively. Refactor this.
         fk_key_columns = query_expr.model.get_fk_columns()
-        if fk_key_columns:
+        if fk_key_columns and len(entities) > 0:
             self.load_with_foreign_entities(entities, fk_key_columns)
 
         return entities
@@ -122,8 +122,8 @@ class CsvQueryEngine(QueryEngine):
         cache = entity_cache[cache_key]
 
         # filter func that loaded entity is in originating fk list but not in cache
-        def filter_entities(val):
-            return val in fk_ids and val not in cache
+        def filter_entities(id_in_parent):
+            return id_in_parent in fk_ids and id_in_parent not in cache
 
         lambda_expr = FieldLambdaExpr(filter_entities)
         lambda_expr.left = FieldExpr(field_in_fk_model)
@@ -134,8 +134,17 @@ class CsvQueryEngine(QueryEngine):
 
         for entity in new_entities:
             cache[getattr(entity, field_in_fk_model)] = entity
+
+        model_of_child = type(entities_to_patch[0])
         for patch in entities_to_patch:
-            setattr(patch, fk_object_field, cache[getattr(patch, fk_field)])
+            ck = getattr(patch, fk_field)
+            val = cache.get(ck, None)
+            if fk_column.key.strict and val is None:
+                child_field = "%s.%s" % (model_of_child.__name__, fk_column.field)
+                parent_field = "%s.%s" % (fk_model.__name__, field_in_fk_model)
+                raise QueryEngineException('foreign key value "%s" in field "%s" does not exist in "%s" entities'
+                                           % (ck, child_field, parent_field))
+            setattr(patch, fk_object_field, val)
 
         if len(new_entities) > 0:
             for c in fk_model.get_fk_columns():

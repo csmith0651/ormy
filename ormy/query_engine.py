@@ -198,17 +198,11 @@ class WholeRecordExpr(OperandExpr):
         return super().__eq__(other)
 
 
-class RecordLambdaExpr(OperatorExpr):
+class RecordLambdaExpr(OperandExpr):
     def __init__(self, func):
         super().__init__()
         self.func = func
         self.left = WholeRecordExpr()
-
-    def precedence(self):
-        return 15
-
-    def operand_count(self):
-        return 0
 
     def __str__(self):
         return 'rlambda(%s)' % self.func
